@@ -17,20 +17,15 @@ work_process:
 
 team:
   enable: true
-  title : "My Team"
+  title : "Who we are?"
   team_member:
-    - title : "Jack Schenziwe"
-      image : "images/team/member-1.png"
-      designation : "Project Manager"
+    - title : "Angel Barrera"
+      image : "images/team/angel.jpg"
+      designation : "From fullstack developer to devops, SRE, cloud architect, automation engineer... put your innovative role here."
 
-    - title : "Julias Carlie"
-      image : "images/team/member-2.png"
-      designation : "Web Developer"
-
-    - title : "John Doe"
-      image : "images/team/member-3.png"
-      designation : "Designer"
-
+    - title : "Pau Rosello"
+      image : "images/team/pau.jpg"
+      designation : "Pau is an engineer with a passion for technology and a platform developer with Kubernetes."
 
 clients_logo_slider:
   enable : true
