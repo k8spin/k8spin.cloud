@@ -20,7 +20,7 @@ about:
     URL: "about"
 
 skill:
-  enable: true
+  enable: false
   title: "Skills"
   item:
     - title: "Web Design"
@@ -40,7 +40,7 @@ skill:
       color: "#ffbcaa"
 
 experience:
-  enable: true
+  enable: false
   title: "Experience"
   item:
     - logo: "images/experience/icon-1.png"
@@ -60,7 +60,7 @@ experience:
 
 # education
 education:
-  enable: true
+  enable: false
   title: "Education"
   item:
     - title: "Marters in UX Design"
@@ -81,7 +81,7 @@ education:
 
 # service
 service:
-  enable: true
+  enable: false
   title: "Services"
   item:
     - title: "UI Design"
@@ -101,14 +101,14 @@ service:
 
 # portfolio
 portfolio:
-  enable: true
+  enable: false
   title: "Portfolio"
   item_show: 5
   # portfolio item comes from 'data/portfolio.yml' item.
 
 # testimonial
 testimonial:
-  enable: true
+  enable: false
   title: "Testimonials"
   item:
     - name: "Jesica Gomez"
@@ -128,7 +128,7 @@ testimonial:
 
 # client logo slider
 clients_logo_slider:
-  enable: true
+  enable: false
   item:
     - logo: "images/clients-logo/client-logo-1.png"
       URL: "http://examplesite.com"
@@ -162,6 +162,6 @@ clients_logo_slider:
 
 # blog
 blog:
-  enable: true
+  enable: false 
   title: "Blogs"
   # blog post comes from "content/blog" folder

@@ -32,25 +32,9 @@ URL = "plugins/shuffle/shuffle.min.js"
 
 # menu
 [[menu.main]]
-URL = "about"
-name = "About"
+URL = "oss-projects"
+name = "OSS Projects"
 weight = 2
-
-[[menu.main]]
-URL = "blog"
-name = "Blog"
-weight = 3
-
-[[menu.main]]
-URL = "portfolio"
-name = "Portfolio"
-weight = 4
-
-[[menu.main]]
-URL = "contact"
-name = "Contact"
-weight = 5
-
 
 # default parameters
 [params]
@@ -60,11 +44,11 @@ logo = "images/output-onlinepngtools.png"
 theme_color = "#000000"
 # contact info
 phone = "+880 2544 658 256"
-email = "angel @ k8spin.cloud / pau @ k8spin.cloud"
+email = "angel@k8spin.cloud / pau@k8spin.cloud"
 address = "125/A, CA Commercial Area, California, USA"
 # meta description
-author = "Johnathan Smith"
-description = "This is meta description"
+author = "K8Spin"
+description = "K8Spin team"
 # google analitycs
 google_analitycs_id = "Your ID"
 # copyright
@@ -74,7 +58,7 @@ copyright = "Copyrighht &copy; 2020 a theme by [gethugothemes](https://gethugoth
 # contact
 [params.contact]
 enable = true
-form_action = "#" # contact form works with : https://formspree.io
+form_action = "https://formspree.io/xyybgppy" # contact form works with : https://formspree.io
 
 # preloader
 [params.preloader]

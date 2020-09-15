@@ -1,0 +1,103 @@
+{{ define "main" }}
+
+<!-- hero area -->
+<section class="hero-area bg-primary overflow-hidden" id="parallax">
+  <div class="layer-bg w-100">
+    <img class="img-fluid w-100" src="{{`images/illustrations/woman.jpg` | relURL}}" alt="bg-shape">
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 mr-auto">
+        <h3 class="text-white font-tertiary">{{ .Site.Data.oss.banner.title | safeHTML }}</h3>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /hero area -->
+
+{{ if .Site.Data.oss.mission.enable }}
+<!-- mission -->
+<section class="section text-white bg-dark">
+  <div class="container">
+    <div class="row">
+      {{ with .Site.Data.oss.mission }}
+      <div class="col-lg-3">
+        <a href="{{ .image_url | absURL }}"><img class="img-fluid" src="{{`images/illustrations/octocat.png` | relURL}}" alt="GitHub"></a>
+      </div>
+      <div class="col-lg-9 mx-auto">
+        <h3 class="display-3 text-white">{{.header | markdownify}}</h3>
+        <p class="font-secondary text-white lead">{{.content | markdownify}}</p>
+        {{ if .button.enable }}
+        {{ with .button }}
+        <a href="{{ .URL | absURL }}" class="btn btn-transparent">{{.label}}</a>
+        {{ end }}
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /mission -->
+{{ end }}
+
+
+{{ if .Site.Data.oss.operator.enable }}
+<!-- operator -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 mx-auto">
+        {{ with .Site.Data.oss.operator }}
+        <h3 class="display-3">{{.header | markdownify}}</h3>
+        <p class="font-secondary lead">{{.content | markdownify}}</p>
+        {{ if .button.enable }}
+        {{ with .button }}
+        <a href="{{ .URL | absURL }}" class="btn">{{.label}}</a>
+        {{ end }}
+        {{ end }}
+        
+      </div>
+      <div class="col-lg-6">
+        <a href="{{ .image_url | absURL }}"><img class="img-fluid" src="{{`images/illustrations/operator.png` | relURL}}" alt="GitHub"></a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+<!-- /operator -->
+{{ end }}
+
+<!-- projects -->
+{{ if .Site.Data.oss.projects.enable }}
+{{ with .Site.Data.oss.projects }}
+<section class="section bg-cover">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-12 text-center">
+        <h2 class="section-title">{{ .title | markdownify }}</h2>
+      </div>
+      {{ range .project }}
+      <div class="col-md-3">
+        <div class="card text-center">
+          <img src="{{ .image | absURL }}" class="card-img-top">
+          <div class="card-body">
+            <h4 class="card-title">{{.title }}</h4>
+            <p class="text-light font-secondary">{{.description }}</p>
+            {{ if .button.enable }}
+            {{ with .button }}
+            <a href="{{ .URL | absURL }}">{{.label}}</a>
+            {{ end }}
+            {{ end }}
+          </div>
+          
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+<!-- /projects -->
+
+{{ end }}

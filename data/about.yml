@@ -1,5 +1,5 @@
 work_process:
-  enable : true
+  enable : false
   title : "Work Process"
   item:
   - title : "Research and Plan"
@@ -28,5 +28,5 @@ team:
       designation : "Pau is an engineer with a passion for technology and a platform developer with Kubernetes."
 
 clients_logo_slider:
-  enable : true
+  enable : false
   title : "My Clients"

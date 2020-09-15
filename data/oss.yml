@@ -1,0 +1,54 @@
+banner:
+  title: "Discover K8Spin open source software"
+
+mission:
+  enable: true
+  image_url: https://github.com/k8spin
+  header: Open sourced
+  content: | 
+    K8Spin was born as a SaaS offering a disruptive concept in the market: Kubernetes namespaces as a Service.
+    Now you can enjoy the multi-tenant capabilities of Kubernetes in your own cluster.
+  button:
+    enable: false
+    label: "know more"
+    URL: "about"
+
+operator:
+  enable: true
+  image_url: https://github.com/k8spin/k8spin-operator
+  header: K8Spin Operator
+  content: | 
+    It is the solution you need in your platform to manage internal budgets for your work teams and departments.
+    Invoice your teams for the use of the cluster, easily manage access to organizations, tenants or spaces, isolate execution environments to meet legal requirements and much more with this operator.
+  button:
+    enable: true
+    label: "Discover K8Spin Operator in Github"
+    URL: "https://github.com/k8spin/k8spin-operator"
+
+projects:
+  enable: true
+  title : "More OSS projects"
+  project:
+    - title : "Loki multi-tenant proxy"
+      image : "images/loki.png"
+      description : "Loki was designed to provide multi-tenant logging capabilities out of the box and this is why we love it, but it does not provide any authentication layer."
+      button:
+        enable: true
+        label: "Discover loki multi-tenant proxy in Github"
+        URL: "https://github.com/k8spin/loki-multi-tenant-proxy"
+
+    - title : "Grafana Operator"
+      image : "images/grafana.png"
+      description : "Grafana is another software who was built with the multi-tenant concept in its DNA. We wanted to make it super simple to manage a Grafana instance just with Kubernetes CRDs."
+      button:
+        enable: true
+        label: "Discover grafana-operator in Github"
+        URL: "https://github.com/k8spin/grafana-multi-tenant-operator"
+
+    - title : "Prometheus multi-tenant proxy"
+      image : "images/prom.png"
+      description : "K8Spin team has built an authentication layer and query rewriter to provide multi-tenant features to Prometheus."
+      button:
+        enable: true
+        label: "Discover prometheus multi-tenant proxy in Github"
+        URL: "https://github.com/k8spin/prometheus-multi-tenant-proxy"
