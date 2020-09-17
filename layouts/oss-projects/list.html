@@ -100,4 +100,30 @@
 {{ end }}
 <!-- /projects -->
 
+{{ if .Site.Data.oss.slack.enable }}
+<!-- slack -->
+<section class="section text-white bg-dark"  data-background="{{`images/backgrounds/map.png`|relURL}}">
+  <div class="container">
+    <div class="row">
+      {{ with .Site.Data.oss.slack }}
+      <div class="col-lg-3">
+        <a href="{{ .image_url | absURL }}"><img class="img-fluid" src="{{`images/slack.png` | relURL}}" alt="GitHub"></a>
+      </div>
+      <div class="col-lg-9 mx-auto">
+        <h3 class="display-3 text-white">{{.header | markdownify}}</h3>
+        <p class="font-secondary text-white lead">{{.content | markdownify}}</p>
+        {{ if .button.enable }}
+        {{ with .button }}
+        <a href="{{ .URL | absURL }}" class="btn">{{.label}}</a>
+        {{ end }}
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  <img class="img-fluid edu-bg-image w-100" src="{{`images/backgrounds/bg-dots.png`|relURL}}" alt="bg-image">
+</section>
+<!-- /slack -->
+{{ end }}
+
 {{ end }}

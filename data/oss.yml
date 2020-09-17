@@ -5,7 +5,7 @@ mission:
   enable: true
   image_url: https://github.com/k8spin
   header: Open sourced
-  content: | 
+  content: |
     K8Spin was born as a SaaS offering a disruptive concept in the market: Kubernetes namespaces as a Service.
     Now you can enjoy the multi-tenant capabilities of Kubernetes in your own cluster.
   button:
@@ -13,11 +13,22 @@ mission:
     label: "know more"
     URL: "about"
 
+slack:
+  enable: true
+  image_url: https://github.com/k8spin
+  header: Find us in the Kubernetes Slack Group
+  content: |
+    Join the conversation. We are open to talk at any time in the Kubernetes Slack Group (find us in our dedicated channel `#k8spin`). We use the channel to talk about multi-tenant challenges and solutions.
+  button:
+    enable: true
+    label: "Join now the Kubernetes Slack Group and start a conversation"
+    URL: "http://slack.kubernetes.io/"
+
 operator:
   enable: true
   image_url: https://github.com/k8spin/k8spin-operator
   header: K8Spin Operator
-  content: | 
+  content: |
     It is the solution you need in your platform to manage internal budgets for your work teams and departments.
     Invoice your teams for the use of the cluster, easily manage access to organizations, tenants or spaces, isolate execution environments to meet legal requirements and much more with this operator.
   button:
