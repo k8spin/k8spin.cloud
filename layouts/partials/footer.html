@@ -44,7 +44,7 @@
         <div class="col-md-4">
           <h5 class="text-light font-tertiary">Email</h5>
           {{ range .Site.Params.email }}
-          <a class="text-white" href="{{.dir | safeURL }}">{{ .name }}: {{ .dir }}</a><br />
+          <a class="text-white" href="mailto:{{.dir | safeURL }}">{{ .name }}: {{ .dir }}</a><br />
           {{ end }}
         </div>
         <div class="col-md-4">
