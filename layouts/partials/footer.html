@@ -1,0 +1,85 @@
+{{ if .Site.Params.contact.enable }}
+<!-- contact -->
+<section class="section section-on-footer font-tertiary"
+  data-background="{{`images/backgrounds/bg-dots.png` | absURL}}">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">Contact Us</h2>
+      </div>
+      <div class="col-lg-8 mx-auto">
+        <div class="bg-white rounded text-center p-5 shadow-down">
+          <h4 class="font-tertiary">More to come...</h4>
+          <p>If you are interested in a multi-tenant environment and don't know what solution to adopt, consider us. We
+            have the experience and capacity to continue publishing useful code for multi-tenant environments.</p>
+          <p>Feel free to tell us your use case providing your email address.</p>
+          <form action="{{.Site.Params.contact.form_action}}" method="POST" class="row">
+            <div class="col-md-6">
+              <input type="text" id="name" name="name" placeholder="Full Name" class="form-control px-0 mb-4">
+            </div>
+            <div class="col-md-6">
+              <input type="email" id="email" name="email" placeholder="Email Address" class="form-control px-0 mb-4">
+            </div>
+            <div class="col-12">
+              <textarea name="message" id="message" class="form-control px-0 mb-4"
+                placeholder="Type Message Here"></textarea>
+            </div>
+            <div class="col-lg-6 col-10 mx-auto">
+              <button class="btn btn-primary w-100">send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /contact -->
+{{ end }}
+
+<!-- footer -->
+<footer class="bg-dark footer-section">
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5 class="text-light font-tertiary">Email</h5>
+          {{ range .Site.Params.email }}
+          <a class="text-white" href="{{.dir | safeURL }}">{{ .name }}: {{ .dir }}</a><br />
+          {{ end }}
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-light font-tertiary">Location</h5>
+          <p class="text-white paragraph-lg font-tertiary">{{.Site.Params.address}}</p>
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-light font-tertiary">Social</h5>
+          <p>
+            {{ range .Site.Params.social }}
+            <a class="text-white" href="{{.URL | safeURL }}"><i class="{{.icon}}"></i></a>
+            {{ end }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- /footer -->
+
+{{ "<!-- JS Plugins -->" | safeHTML }}
+{{ range .Site.Params.plugins.js}}
+<script src="{{ .URL | absURL }}"></script>
+{{ end }}
+{{ "<!-- Main Script -->" | safeHTML }}
+{{ $script := resources.Get "js/script.js" | minify}}
+<script src="{{ $script.Permalink }}"></script>
+{{ "<!-- google analitycs -->" | safeHTML }}
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', '{{ .Site.Params.google_analitycs_id }}', 'auto');
+  ga('send', 'pageview');
+</script>

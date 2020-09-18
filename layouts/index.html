@@ -9,7 +9,7 @@
       <div class="row">
         <div class="col-lg-4 ml-auto">
           <h3 class="text-white font-tertiary">{{ .Site.Data.homepage.banner.title | safeHTML }}</h3>
-          <h5 class="text-white font-tertiary">{{ .Site.Data.homepage.banner.subTitle | safeHTML }}</h5>
+          <h5 class="text-muted font-tertiary">{{ .Site.Data.homepage.banner.subTitle | safeHTML }}</h5>
         </div>
       </div>
     </div>
@@ -26,8 +26,8 @@
         </div>
         <div class="col-lg-9 mx-auto">
           {{ with .Site.Data.homepage.mission }}
-          <h3 class="display-3 text-white">{{.header | markdownify}}</h3>
-          <p class="font-secondary text-white lead">{{.content | markdownify}}</p>
+          <h3 class="display-3 text-white font-tertiary">{{.header | markdownify}}</h3>
+          <p class="text-white font-tertiary">{{.content | markdownify}}</p>
           {{ if .button.enable }}
           {{ with .button }}
           <a href="{{ .URL | absURL }}" class="btn btn-transparent">{{.label}}</a>
@@ -74,10 +74,10 @@
       {{ range .team_member }}
       <div class="col-md-3">
         <div class="card text-center">
-          <img src="{{ .image | absURL }}" class="card-img-top">
+          <img src="{{ .image | absURL }}" class="card-img-top rounded-circle">
           <div class="card-body">
-            <h4 class="card-title">{{.title }}</h4>
-            <p class="text-light font-secondary">{{.designation }}</p>
+            <h4 class="card-title font-tertiary">{{.title }}</h4>
+            <p class="text-secondary font-tertiary">{{.designation }}</p>
           </div>
         </div>
       </div>

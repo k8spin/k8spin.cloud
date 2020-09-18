@@ -22,11 +22,12 @@
     <div class="row">
       {{ with .Site.Data.oss.mission }}
       <div class="col-lg-3">
-        <a href="{{ .image_url | absURL }}"><img class="img-fluid" src="{{`images/illustrations/octocat.png` | relURL}}" alt="GitHub"></a>
+        <a href="{{ .image_url | absURL }}"><img class="img-fluid" src="{{`images/illustrations/octocat.png` | relURL}}"
+            alt="GitHub"></a>
       </div>
       <div class="col-lg-9 mx-auto">
-        <h3 class="display-3 text-white">{{.header | markdownify}}</h3>
-        <p class="font-secondary text-white lead">{{.content | markdownify}}</p>
+        <h3 class="font-tertiary display-3 text-white">{{.header | markdownify}}</h3>
+        <p class="font-tertiary text-white">{{.content | markdownify}}</p>
         {{ if .button.enable }}
         {{ with .button }}
         <a href="{{ .URL | absURL }}" class="btn btn-transparent">{{.label}}</a>
@@ -48,17 +49,18 @@
     <div class="row">
       <div class="col-lg-6 mx-auto">
         {{ with .Site.Data.oss.operator }}
-        <h3 class="display-3">{{.header | markdownify}}</h3>
-        <p class="font-secondary lead">{{.content | markdownify}}</p>
+        <h3 class="font-tertiary display-3">{{.header | markdownify}}</h3>
+        <p class="font-tertiary">{{.content | markdownify}}</p>
         {{ if .button.enable }}
         {{ with .button }}
-        <a href="{{ .URL | absURL }}" class="btn">{{.label}}</a>
+        <a class="font-tertiary" href="{{ .URL | absURL }}" class="btn">{{.label}}</a>
         {{ end }}
         {{ end }}
-        
+
       </div>
       <div class="col-lg-6">
-        <a href="{{ .image_url | absURL }}"><img class="img-fluid" src="{{`images/illustrations/operator.png` | relURL}}" alt="GitHub"></a>
+        <a href="{{ .image_url | absURL }}"><img class="img-fluid"
+            src="{{`images/illustrations/operator.png` | relURL}}" alt="GitHub"></a>
       </div>
       {{ end }}
     </div>
@@ -81,16 +83,21 @@
         <div class="card text-center">
           <img src="{{ .image | absURL }}" class="card-img-top">
           <div class="card-body">
-            <h4 class="card-title">{{.title }}</h4>
-            <p class="text-light font-secondary">{{.description }}</p>
-            {{ if .button.enable }}
-            {{ with .button }}
-            <a href="{{ .URL | absURL }}">{{.label}}</a>
-            {{ end }}
-            {{ end }}
+            <h4 class="font-tertiary card-title">{{.title }}</h4>
+            <p class="text-light font-tertiary">{{.description }}</p>
           </div>
-          
         </div>
+      </div>
+      {{ end }}
+    </div>
+    <div class="row justify-content-md-center">
+      {{ range .project }}
+      <div class="col-md-3 text-center">
+        {{ if .button.enable }}
+        {{ with .button }}
+        <a class="font-tertiary text-center" href="{{ .URL | absURL }}">{{.label}}</a>
+        {{ end }}
+        {{ end }}
       </div>
       {{ end }}
     </div>
@@ -102,19 +109,20 @@
 
 {{ if .Site.Data.oss.slack.enable }}
 <!-- slack -->
-<section class="section text-white bg-dark"  data-background="{{`images/backgrounds/map.png`|relURL}}">
+<section class="section text-white bg-dark" data-background="{{`images/backgrounds/map.png`|relURL}}">
   <div class="container">
     <div class="row">
       {{ with .Site.Data.oss.slack }}
       <div class="col-lg-3">
-        <a href="{{ .image_url | absURL }}"><img class="img-fluid" src="{{`images/slack.png` | relURL}}" alt="GitHub"></a>
+        <a href="{{ .image_url | absURL }}"><img class="img-fluid" src="{{`images/slack.png` | relURL}}"
+            alt="GitHub"></a>
       </div>
       <div class="col-lg-9 mx-auto">
-        <h3 class="display-3 text-white">{{.header | markdownify}}</h3>
-        <p class="font-secondary text-white lead">{{.content | markdownify}}</p>
+        <h2 class="font-tertiary text-white">{{.header | markdownify}}</h2>
+        <p class="font-tertiary text-white">{{.content | markdownify}}</p>
         {{ if .button.enable }}
         {{ with .button }}
-        <a href="{{ .URL | absURL }}" class="btn">{{.label}}</a>
+        <a class="font-tertiary" href="{{ .URL | absURL }}" class="btn">{{.label}}</a>
         {{ end }}
         {{ end }}
         {{ end }}

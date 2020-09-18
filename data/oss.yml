@@ -15,7 +15,7 @@ mission:
 
 slack:
   enable: true
-  image_url: https://github.com/k8spin
+  image_url: http://slack.kubernetes.io/
   header: Find us in the Kubernetes Slack Group
   content: |
     Join the conversation. We are open to talk at any time in the Kubernetes Slack Group (find us in our dedicated channel `#k8spin`). We use the channel to talk about multi-tenant challenges and solutions.

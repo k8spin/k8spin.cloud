@@ -44,8 +44,7 @@ logo = "images/output-onlinepngtools.png"
 theme_color = "#000000"
 # contact info
 phone = "+880 2544 658 256"
-email = "angel@k8spin.cloud / pau@k8spin.cloud"
-address = "125/A, CA Commercial Area, California, USA"
+address = "Based in Spain, working everywhere"
 # meta description
 author = "K8Spin"
 description = "K8Spin team"
@@ -67,17 +66,17 @@ preloader = "" # use png, jpg, svg or gif format
 
 # social site
 [[params.social]]
-URL = "#"
-icon = "ti-facebook"
+URL = "https://github.com/k8spin"
+icon = "ti-github"
 
 [[params.social]]
-URL = "#"
-icon = "ti-instagram"
+URL = "https://twitter.com/k8spin"
+icon = "ti-twitter"
 
-[[params.social]]
-URL = "#"
-icon = "ti-dribbble"
+[[params.email]]
+name = "Angel"
+dir = "angel@k8spin.cloud"
 
-[[params.social]]
-URL = "#"
-icon = "ti-twitter-alt"
+[[params.email]]
+name = "Pau"
+dir = "pau@k8spin.cloud"
