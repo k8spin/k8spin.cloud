@@ -1,0 +1,39 @@
+name: "Release"
+
+on:
+  push:
+    branches:
+      - "*"
+
+# on:
+#   push:
+#     tags:
+#       - v*
+
+jobs:
+  release:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.82.0"
+          extended: true
+
+      - name: Build
+        run: hugo --gc --minify
+
+      - name: Minio Deploy
+        uses: lovellfelix/minio-deploy-action@v1
+        with:
+          endpoint: ${{ secrets.MINIO_SERVER }}
+          access_key: ${{ secrets.MINIO_USER }}
+          secret_key: ${{ secrets.MINIO_PASS }}
+          bucket: ${{ secrets.MINIO_BUCKET_NAME }}
+          source_dir: public
+          target_dir: "/"
