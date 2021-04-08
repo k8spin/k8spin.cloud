@@ -3,12 +3,7 @@ name: "Release"
 on:
   push:
     branches:
-      - "*"
-
-# on:
-#   push:
-#     tags:
-#       - v*
+      - "master"
 
 jobs:
   release:
