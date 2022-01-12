@@ -28,13 +28,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-
-      - name: Minio Deploy
-        uses: lovellfelix/minio-deploy-action@v1
-        with:
-          endpoint: ${{ secrets.MINIO_SERVER }}
-          access_key: ${{ secrets.MINIO_USER }}
-          secret_key: ${{ secrets.MINIO_PASS }}
-          bucket: ${{ secrets.MINIO_BUCKET_NAME }}
-          source_dir: public
-          target_dir: "/"
